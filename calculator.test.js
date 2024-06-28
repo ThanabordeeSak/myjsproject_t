@@ -16,3 +16,24 @@ test('Divide numbers using the divide method', () => {
 test('Find the remainder of dividing numbers using the modulo method', () => {
      expect(calculator.modulo(x, y)).toBe(3)
 });
+
+function add(a, b) {
+     return a + b;
+}
+function subtract(a, b) {
+     return a - b;
+}
+function multiply(a, b) {
+     return a * b;
+}
+function divide(a, b) {
+     return a / b;
+}
+function modulo(a, b) {
+     return a % b;
+}
+module.exports.add = add;
+module.exports.subtract = subtract;
+module.exports.multiply = multiply;
+module.exports.divide = divide;
+module.exports.modulo = modulo;
