@@ -1,28 +1,13 @@
-const calculator = require('./calculator');
-const x = 13;
-const y = 5;
-test('Add numbers using the add method', () => {
-     expect(calculator.add(x, y)).toBe(18)
+const calculate = require('./calculator');
+
+test('calculates (1 + 2) * 3 / 2 to equal 4.5', () => {
+  expect(calculate(1, 2, 3)).toBe(4.5);
 });
 
-test('Subtract numbers using the subtract method', () => {
-     expect(calculator.subtract(x, y)).toBe(8)
+test('calculates (4 + 5) * 6 / 2 to equal 27', () => {
+  expect(calculate(4, 5, 6)).toBe(27);
 });
 
-test('Multiply numbers using the multiply method', () => {
-     expect(calculator.multiply(x, y)).toBe(65)
+test('calculates (0 + 0) * 1 / 2 to equal 0', () => {
+  expect(calculate(0, 0, 1)).toBe(0);
 });
-
-test('Divide numbers using the divide method', () => {
-     expect(calculator.divide(x, y)).toBe(2.6)
-});
-
-test('Find the remainder of dividing numbers using the modulo method', () => {
-     expect(calculator.modulo(x, y)).toBe(3)
-});
-
-module.exports.add = add;
-module.exports.subtract = subtract;
-module.exports.multiply = multiply;
-module.exports.divide = divide;
-module.exports.modulo = modulo;
