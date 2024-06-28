@@ -1,17 +1,18 @@
-const { sum, multiply, divide } = require('./calculator.js')
-
-test('add 2 + 5 to equal 7', () => {
-    expect(sum(2, 5)).toBe(7);
-})
-
-test('multiply 2*3 to equal 6', () => {
-    expect(multiply(2, 3)).toBe(6);
-})
-
-test('divide 6/3 to equal 2', () => {
-    expect(divide(6, 3)).toBe(2);
-})
-
-test('divide 6/0 to throw error', () => {
-    expect(() => divide(6, 0)).toThrow('Cannot divide by zero');
-})
+const calculator = require('./calculator');
+const x = 13;
+const y = 5;
+test('Add numbers using the add method', () => {
+     expect(calculator.add(x, y)).toBe(18)
+});
+test('Subtract numbers using the subtract method', () => {
+     expect(calculator.subtract(x, y)).toBe(8)
+});
+test('Multiply numbers using the multiply method', () => {
+     expect(calculator.multiply(x, y)).toBe(65)
+});
+test('Divide numbers using the divide method', () => {
+     expect(calculator.divide(x, y)).toBe(2.6)
+});
+test('Find the remainder of dividing numbers using the modulo method', () => {
+     expect(calculator.modulo(x, y)).toBe(3)
+});
